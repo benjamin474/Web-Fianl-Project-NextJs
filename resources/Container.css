@@ -1,0 +1,227 @@
+/* 網頁主體程式碼 */
+h1 {
+    font-size: 80px;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    /* opacity: 0; */
+    animation: fadeIntext 2s forwards;
+    overflow: hidden;
+    position: relative;
+    height: 120px;
+}
+
+h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 0;
+    background-color: rgb(34, 33, 33);
+    animation: expandBar 1s forwards;
+}
+
+h1 span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    color: white;
+    animation: fadeInText 1.5s forwards;
+    animation-delay: 1s;
+    /* 延遲文字出現，直到黑條展開完畢 */
+}
+
+/* 容器添加的部分採用table的方式實現 */
+
+table tr td {
+    border: 5px groove white;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 100%;
+    width:100%;
+    z-index: 4;
+}
+
+table {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.queue-table{
+    table-layout: fixed;
+    width:100%;
+}
+
+.inserted {
+    animation: hightlight 1s;
+    background-color: white;
+}
+
+.getTop{
+    animation: hightlightw 1.2s ease-in-out;
+    background-color: white;
+}
+
+.white{
+    background-color: white;
+}
+
+
+.removed{
+    animation: leave 1s;
+    background-color: transparent;
+}
+
+
+.go_home {
+    position: absolute;
+    top: 65px;
+    left: 50px;
+}
+
+.go_home>a img {
+    width: 100px;
+    height: 100px;
+    /* opacity: 0; */
+    animation: fadeInText 1s;
+}
+
+.button_group {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.set {
+    text-align: center;
+    text-decoration: none;
+}
+
+.button {
+    color: white;
+    font-size: 55px;
+    width: 100%;
+    height: 90px;
+    text-align: center;
+    line-height: 90px;
+    border: 5px outset gray;
+    background-color: green;
+    /* text-align: center; */
+    align-self: center;
+
+    position: relative;
+    top: 40px;
+}
+
+.button:hover {
+    background-color: darkgreen;
+    border: 5px inset gray;
+    font-size: 52px;
+    color: Yellow;
+    cursor: pointer;
+}
+
+
+input{
+    width: 200px;
+    height:25px;
+    background-color: rgb(231, 224, 224);
+    text-align: center;
+    border: 5px groove gray;
+    border-radius: 25px;
+}
+
+button{
+    width: 80px;
+    height:30px;
+    background-color: white;
+    /* font-size: ; */
+    top: 10px;
+    border: 5px groove gray;
+    border-radius: 25px;
+}
+
+
+.board {
+    position: absolute;
+    height: 60%;
+    width: 60%;
+    left: 20%;
+    background-color: gray;
+    border: 5px groove green;
+    /* display: flex; */
+    /* align-items: center; */
+    border-radius: 25px;
+}
+
+.input {
+    position: absolute;
+    top: 95%;
+    left: 40%;
+    height: 30px;
+    width: 20%;
+    color: black;
+    text-align: center;
+    /* background-color: white; */
+    display: flex;
+}
+
+
+
+/*黑條*/
+@keyframes expandBar {
+    to {
+        width: 100%;
+        left: 0;
+    }
+}
+/*文字冒出*/
+@keyframes fadeInText {
+    to {
+        opacity: 1;
+    }
+}
+
+/*顯現出來*/
+@keyframes hightlight {
+    50%  {
+        background-color: yellow;
+    }
+
+    0%,100% {
+        background-color: lightyellow;
+    }
+}
+
+/*顯現出來*/
+@keyframes hightlightw {
+    50%  {
+        background-color: yellow;
+    }
+
+    0%,100% {
+        background-color: lightyellow;
+    }
+}
+
+@keyframes leave {
+    0% {
+        background-color: white;
+    }
+
+    50% {
+        background-color: rgb(102, 101, 101);
+    }
+
+    100% {
+        background-color: transparent;
+    }
+}
