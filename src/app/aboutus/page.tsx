@@ -39,14 +39,6 @@ export default function aboutus() {
 				</div>
 				<br />
 				<div
-					id="page"
-					className="button"
-					onClick={(e) => changeContent(e.currentTarget.id)}
-				>
-					實際頁面
-				</div>
-				<br />
-				<div
 					id="work"
 					className="button"
 					onClick={(e) => changeContent(e.currentTarget.id)}
@@ -54,6 +46,14 @@ export default function aboutus() {
 					組員分工
 				</div>
 				<br />
+				
+				<div
+					id="doc"
+					className="button"
+					onClick={(e) => changeContent(e.currentTarget.id)}
+				>
+					網站說明
+				</div>
 			</div>
 
 			<div className="board" id="board">
