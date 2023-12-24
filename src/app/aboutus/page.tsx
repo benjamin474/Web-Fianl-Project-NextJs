@@ -52,7 +52,7 @@ export default function aboutus() {
 					className="button"
 					onClick={(e) => changeContent(e.currentTarget.id)}
 				>
-					網站說明
+					簡報連結
 				</div>
 			</div>
 
