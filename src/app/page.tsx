@@ -46,19 +46,12 @@ export default function Home() {
 					<Link href="/aboutus" passHref legacyBehavior>
 						<a>
 							<div>
-								<Image src={informationImg} alt="" /> About us
+								<Image src={informationImg} alt="" /> 文件
 							</div>
 						</a>
 					</Link>
 					<br />
 					
-					<a href="https://www.canva.com/design/DAF3dZY4u1g/k_vsCELXzV4KR1jnZ-O6Lw/view?utm_content=DAF3dZY4u1g&utm_campaign=designshare&utm_medium=link&utm_source=editor" target="_blank">
-						<div>
-							<Image src={sourceImg} alt="" /> 簡報
-						</div>
-					</a>
-
-					<br />
 					<Link href="/source" passHref legacyBehavior>
 						<a>
 							<div>
