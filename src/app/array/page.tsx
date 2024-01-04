@@ -49,7 +49,7 @@ export default function aboutus() {
 			setSearchIndexInputHidden(true);
 			setDeleteInputHidden(true);
 		} else {
-			alert("Init a array first!");
+			alert("Init a array first");
 		}
 	}
 
