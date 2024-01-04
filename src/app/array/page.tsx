@@ -49,7 +49,7 @@ export default function aboutus() {
 			setSearchIndexInputHidden(true);
 			setDeleteInputHidden(true);
 		} else {
-			alert("Init a array first");
+			alert("Init an array first");
 		}
 	}
 
@@ -60,7 +60,7 @@ export default function aboutus() {
 			setSearchIndexInputHidden(true);
 			setDeleteInputHidden(false);
 		} else {
-			alert("Init a array first");
+			alert("Init an array first");
 		}
 	}
 
@@ -71,7 +71,7 @@ export default function aboutus() {
 			setSearchIndexInputHidden(false);
 			setDeleteInputHidden(true);
 		} else {
-			alert("Init a array first");
+			alert("Init an array first");
 		}
 	}
 
@@ -98,7 +98,7 @@ export default function aboutus() {
 
 	function assignValue() {
 		if (!boardExist) {
-			alert("Init a array first");
+			alert("Init an array first");
 			return;
 		}
 		if (isNaN(Number.parseInt(pushIndexStr))) {
@@ -130,7 +130,7 @@ export default function aboutus() {
 
 	function deleteValue() {
 		if (!boardExist) {
-			alert("Init a array first");
+			alert("Init an array first");
 			return;
 		}
 		if (isNaN(Number.parseInt(deleteIndexStr))) {
@@ -172,7 +172,7 @@ export default function aboutus() {
 	function searchIndex() {
 		if (requesting) return;
 		if (!boardExist) {
-			alert("Init a array first!");
+			alert("Init an array first!");
 			return;
 		}
 		if (isNaN(Number.parseInt(searchIndexValueStr))) {
