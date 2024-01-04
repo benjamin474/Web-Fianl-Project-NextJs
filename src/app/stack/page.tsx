@@ -39,6 +39,12 @@ export default function stack() {
 			alert("Please input a number");
 			return;
 		}
+
+		if(pushValueStr.length>10){
+			alert("This value is too large!")
+			return
+		}
+		
 		let num = Number.parseInt(pushValueStr);
 		const toIns = topIndex + 1;
 		let tempStack = stack;
@@ -144,7 +150,7 @@ export default function stack() {
 				console.log(response);
 				throw new Error(`Can't get data! Error: ${response}`);
 			}
-			alert("Get the response");
+			alert("以下顯示範例");
 			const data = response.data;
 			setStackSize(data.stackSize);
 			setTopIndex(data.topIndex);

@@ -33,7 +33,7 @@ export default function SearchInput({
 			<input
 				type="number"
 				id="stackSize"
-				placeholder="請輸入位置"
+				placeholder="請輸入位置(從0開始)"
 				value={searchInddex}
 				onChange={(e) => onChange(e.target.value)}
 			/>

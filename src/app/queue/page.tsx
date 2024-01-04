@@ -46,6 +46,12 @@ export default function queue() {
 			alert("Please input a number");
 			return;
 		}
+
+		if(enqueueValueStr.length>10){
+			alert("This value is too large!")
+			return
+		}
+		
 		let num = Number.parseInt(enqueueValueStr);
 		const toIns = backIndex + 1;
 
@@ -88,7 +94,6 @@ export default function queue() {
 
 		tempQueue.splice(frontIndex, 1);
 
-		//     //////////這邊你也要特別注意一下，很多Stack那邊的屬性我不知道搬過來應該長怎樣
 		tempQueue.push({ num: null, hasItem: false, front: false, back: false });
 		let newBackIndex = backIndex - 1;
 		if (newBackIndex >= 0) {
@@ -142,7 +147,7 @@ export default function queue() {
 				console.log(response);
 				throw new Error(`Can't get data! Error: ${response}`);
 			}
-			alert("Get the response");
+			alert("以下顯示範例");
 			const data = response.data;
 			setQueueSize(data.queueSize);
 			setFrontIndex(data.frontIndex);

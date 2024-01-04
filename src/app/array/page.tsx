@@ -49,7 +49,7 @@ export default function aboutus() {
 			setSearchIndexInputHidden(true);
 			setDeleteInputHidden(true);
 		} else {
-			alert("Init a array first");
+			alert("Init a array first!");
 		}
 	}
 
@@ -114,6 +114,10 @@ export default function aboutus() {
 			alert("Index out of bound");
 			return;
 		}
+		if(pushValueStr.length > 10){
+			alert("This value is too large!");
+			return ;
+		}
 		let assignV = Number.parseInt(pushValueStr);
 		let tempArray = array;
 		tempArray[assignI].hasItem = true;
@@ -177,12 +181,12 @@ export default function aboutus() {
 		}
 		let searchI = Number.parseInt(searchIndexValueStr);
 		if (!(searchI >= 0 && searchI < arraySize)) {
-			alert("Index out of bound");
+			alert("超出 array 長度!");
 			return;
 		}
 		let tempArray = array;
 		if (!tempArray[searchI].hasItem) {
-			alert("您指定的 index 位置之值為 undefined");
+			alert("此位置沒有數值!");
 			return;
 		}
 		tempArray[searchI].search = true;
@@ -220,7 +224,7 @@ export default function aboutus() {
 				console.log(response);
 				throw new Error(`Can't get data! Error: ${response}`);
 			}
-			alert("Get the response");
+			alert("以下顯示範例");
 			const data = response.data;
 			setArraySize(data.arraySize);
 			setArray(data.array);

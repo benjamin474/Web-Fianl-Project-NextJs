@@ -32,7 +32,7 @@ export default function InputValue({
 			<input
 				type="number"
 				id="stackSize"
-				placeholder="請輸入數字"
+				placeholder="請輸入10位數以內的數值"
 				value={enqueueValueStr}
 				onChange={(e) => onChange(e.target.value)}
 			/>

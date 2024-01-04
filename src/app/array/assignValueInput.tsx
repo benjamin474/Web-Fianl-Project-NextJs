@@ -50,7 +50,7 @@ export default function assignValueInput({
 			<input
 				type="number"
 				id="assignValue"
-				placeholder="請輸入數字"
+				placeholder="請輸入10位數以內的數值"
 				value={pushValueStr}
 				onChange={(e) => onValueChange(e.target.value)}
 			/>
